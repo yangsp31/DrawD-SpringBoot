@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "https://schemas/diagramValidJsonSchema",
+  "type": "array",
+  "default": {},
+  "title": "Diagram Schema",
+  "items" : {
+    "type" : "object",
+    "required": [
+      "color",
+      "cuts",
+      "height",
+      "highValue",
+      "id",
+      "invert",
+      "lowValue",
+      "name",
+      "showValues",
+      "type",
+      "width",
+      "x",
+      "y",
+      "zIndex"
+    ],
+    "properties": {
+      "color": {
+        "type": "string",
+        "default": "#e59e9e",
+        "title": "The color Schema",
+        "examples": ["#bb4444"]
+      },
+      "cuts": {
+        "type": "array",
+        "default": [],
+        "title": "The cuts Schema",
+        "items": {
+          "type": "object",
+          "title": "A Schema",
+          "required": ["start", "end"],
+          "properties": {
+            "start": {
+              "type": "number",
+              "title": "The start Schema",
+              "examples": [352, 525]
+            },
+            "end": {
+              "type": "number",
+              "title": "The end Schema",
+              "examples": [452, 627]
+            }
+          },
+          "examples": [{"start": 352, "end": 452}, {"start": 525, "end": 627}]
+        },
+        "examples": [[{"start": 352, "end": 452}, {"start": 525, "end": 627}]]
+      },
+      "height": {
+        "type": "number",
+        "title": "The height Schema",
+        "examples": [770]
+      },
+      "highValue": {
+        "type": "number",
+        "default": 0.0,
+        "title": "The highValue Schema",
+        "examples": [1.2]
+      },
+      "id": {
+        "type": "integer",
+        "default": 0,
+        "title": "The id Schema",
+        "examples": [1728373668907]
+      },
+      "invert": {
+        "type": "boolean",
+        "default": false,
+        "title": "The invert Schema",
+        "examples": [false]
+      },
+      "lowValue": {
+        "type": ["number", "null"],
+        "title": "The lowValue Schema",
+        "examples": [8.4, null]
+      },
+      "name": {
+        "type": "string",
+        "default": "",
+        "title": "The name Schema",
+        "examples": ["jnkjkl;l;lpkp"]
+      },
+      "showValues": {
+        "type": "boolean",
+        "default": false,
+        "title": "The showValues Schema",
+        "examples": [true]
+      },
+      "type": {
+        "type": "string",
+        "title": "The type Schema",
+        "enum" : ["Organic", "Metal", "Other"],
+        "examples": ["Organic"]
+      },
+      "width": {
+        "type": "number",
+        "title": "The width Schema",
+        "examples": [400]
+      },
+      "x": {
+        "type": "number",
+        "default": 0,
+        "title": "The x Schema",
+        "examples": [287]
+      },
+      "y": {
+        "type": "number",
+        "default": 0,
+        "title": "The y Schema",
+        "examples": [160]
+      },
+      "zIndex": {
+        "type": "integer",
+        "default": 0,
+        "title": "The zIndex Schema",
+        "examples": [-1]
+      }
+    },
+    "examples": [{
+      "color": "#bb4444",
+      "cuts": [{
+        "start": 352,
+        "end": 452
+      },
+        {
+          "start": 525,
+          "end": 627
+        }],
+      "height": 770,
+      "highValue": 1.2,
+      "id": 1728373668907,
+      "invert": false,
+      "lowValue": 8.4,
+      "name": "jnkjkl;l;lpkp",
+      "showValues": true,
+      "type": "Organic",
+      "width": 400,
+      "x": 287,
+      "y": 160,
+      "zIndex": -1
+    }]
+  }
+}
